@@ -29,11 +29,20 @@ export default function CreateTodoItem() {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <label htmlFor="title">Title</label>
-      <input type="text" onChange={titleChangeHandler} value={title} />
-      <label htmlFor="content">Content</label>
-      <textarea rows={5} value={content} onChange={contentChangeHandler} />
+    <form onSubmit={submitHandler} style={{ margin: 50 }}>
+      <div
+        style={{ display: "flex", flexDirection: "column", marginBottom: 15 }}
+      >
+        <label htmlFor="title">Title</label>
+        <input type="text" onChange={titleChangeHandler} value={title} />
+      </div>
+      <div
+        style={{ display: "flex", flexDirection: "column", marginBottom: 15 }}
+      >
+        <label htmlFor="content">Content</label>
+        <textarea rows={5} value={content} onChange={contentChangeHandler} />
+      </div>
+
       <button type="submit">Add Todo</button>
     </form>
   );
