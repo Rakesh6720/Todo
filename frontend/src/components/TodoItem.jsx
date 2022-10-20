@@ -1,4 +1,3 @@
-import { useState } from "react";
 export default function TodoItem({ todo }) {
   async function onDeleteHandler() {
     const response = await fetch(`http://localhost:8000/api/notes/${todo.id}`, {
@@ -10,18 +9,31 @@ export default function TodoItem({ todo }) {
     window.location.reload();
   }
   return (
-    <div>
+    <div
+      style={{
+        margin: 50,
+        border: "1px solid black",
+        borderRadius: 10,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div>
-        <h2>{todo.title}</h2>
+        <h2 style={{ textDecoration: "underline" }}>{todo.title}</h2>
       </div>
-
-      <div>
+      <div
+        style={{
+          padding: 25,
+        }}
+      >
         <p>{todo.content}</p>
       </div>
       <div>
         <p>{todo.date}</p>
       </div>
-      <div>
+      <div style={{ margin: 15 }}>
         <button onClick={onDeleteHandler}>Delete</button>
       </div>
     </div>

@@ -19,6 +19,7 @@ function App() {
   }
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>My Todo List</h1>
       <TodosList todos={todos} />
       <CreateTodoItem />
     </div>
