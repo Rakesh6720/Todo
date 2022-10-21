@@ -3,14 +3,14 @@ const path = require("path");
 const { v4: uuidv4 } = require("uuid");
 const HttpError = require("../models/http-error");
 
-let NOTES = [
-  {
-    id: "n1",
-    title: "note 1",
-    content: "this is my first note",
-    date: "2022-10-19",
-  },
-];
+// let NOTES = [
+//   {
+//     id: "n1",
+//     title: "note 1",
+//     content: "this is my first note",
+//     date: "2022-10-19",
+//   },
+// ];
 
 const getNotes = (req, res, next) => {
   const p = path.join(
