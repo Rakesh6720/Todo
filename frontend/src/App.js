@@ -4,6 +4,7 @@ import TodosList from "./components/TodosList";
 
 function App() {
   const [todos, setTodos] = useState([]);
+
   useEffect(() => {
     const sendRequest = async () => {
       const response = await fetch("http://localhost:8000/api/notes");
@@ -12,11 +13,12 @@ function App() {
     };
 
     sendRequest();
-  }, []);
+  }, [todos]);
 
   if (!todos) {
     return <h1>Loading Todos...</h1>;
   }
+
   return (
     <div>
       <h1 style={{ textAlign: "center" }}>My Todo List</h1>

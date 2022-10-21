@@ -25,7 +25,7 @@ export default function CreateTodoItem() {
     });
     const responseData = await response.json();
     console.log(responseData);
-    window.location.reload();
+    //window.location.reload();
   }
 
   return (
