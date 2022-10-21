@@ -6,7 +6,7 @@ export default function TodoItem({ todo }) {
 
     const responseData = await response.json();
     console.log(responseData);
-    window.location.reload();
+    //window.location.reload();
   }
   return (
     <div
@@ -18,6 +18,7 @@ export default function TodoItem({ todo }) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        overflow: "hidden",
       }}
     >
       <div>
@@ -30,7 +31,7 @@ export default function TodoItem({ todo }) {
       >
         <p>{todo.content}</p>
       </div>
-      <div>
+      <div style={{ margin: 15 }}>
         <p>{todo.date}</p>
       </div>
       <div style={{ margin: 15 }}>
